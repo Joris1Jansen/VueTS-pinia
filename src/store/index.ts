@@ -1,8 +1,12 @@
-import { createStore } from "vuex";
+import { createStore } from "vuex"
+import todo from "./todo"
 
-export default createStore({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {},
-});
+export const store = createStore({
+  modules: {
+    todo,
+  },
+})
+
+export const useStore = () => {
+  return store
+}
